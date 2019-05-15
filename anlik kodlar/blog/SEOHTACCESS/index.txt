@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ ../post/index.php/?id=$1 [NC,L,QSA]
+RewriteRule ^(\/?)$ ./404.html$1 [NC,L,QSA]
